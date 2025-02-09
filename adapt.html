@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Innovation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="adapt_style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo-link">
+            <img src="img/logo.png" alt="Logo" class="logo">
+        </a>
+        <nav>
+            <button class="menu-toggle">☰</button>
+            <ul class="menu">
+                <label>
+                    <input type="radio" name="wordSelect" id="word1">
+                    <li><a href="#products"><span class="selectable-word">Продукты</span></a></li>
+                </label>
+                <label>
+                    <input type="radio" name="wordSelect" id="word2">
+                    <li class="active"><a href="#services"><span class="selectable-word">Услуги</span></a></li>
+                </label>                
+                <label>
+                    <input type="radio" name="wordSelect" id="word3">
+                    <li><a href="#contacts"><span class="selectable-word">Контакты</span></a></li>
+                </label>
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const menu = document.querySelector('.menu');
+
+            menuToggle.addEventListener('click', () => {
+                menu.classList.toggle('active');
+            });
+        });
+    </script>
+
+<!--products start-->
+<div id="products" class="services-container">
+    <div class="sidebar">
+        <div class="sidebar-item">Мониторинга<br> дорожного движения</div>
+        <div class="sidebar-item_1">Безопасность на дорогах</div>
+        <div class="sidebar-item-end">Подсистема светофорного<br> управления</div>
+    </div>
+    <div class="grid-container">
+        <div class="grid-item active" data-modal-target="#modal1">
+            <div class="grid-item-content">
+                <p>АПК "АТЛАС"</p>
+                <img src="img/Камера 124.png" alt="camera icon" class="icon">
+            </div>
+        </div>
+        <div class="grid-item" data-modal-target="#modal2">
+            <div class="grid-item-content">
+                <p>АПК "АТЛАС-Т"</p>
+                <img src="img/Курсор 1.png" alt="tools icon" class="icon">
+            </div>
+        </div>
+        <div class="grid-item" data-modal-target="#modal3">
+            <div class="grid-item-content">
+                <p>АПК "АТЛАС-М"</p>
+                <img src="img/График-3 4.png" alt="graph icon" class="icon">
+            </div>
+        </div>
+        <div class="grid-item" data-modal-target="#modal4">
+            <div class="grid-item-content">
+                <p>АПК "ЛИРА"</p>
+                <img src="img/Внимание 5.png" alt="alert icon" class="icon">
+           </div>
+        </div>
+        <div class="grid-item empty"></div>
+        <div class="grid-item empty"></div>
+        <div class="grid-item" data-modal-target="#modal5">
+          <div class="grid-item-content">
+            МЕГАПОЛИС
+            <img src="img/Светофор-2 1.png" alt="traffic light icon" class="icon">
+           </div>
+        </div>
+        <div class="grid-item empty"></div>
+        <div class="grid-item empty"></div>
+    </div>
+</div>
+<!--products end-->
+
+<!--services start-->
+    <section id="services" class="our-services">
+        <h2 class="our-services-heading">Наши услуги</h2>
+        <div class="services-cards-container">
+            <div class="service-card">
+                <div class="service-card-icon-1">
+                    <img class="service-img" src="img/material-symbols_developer-mode-tv-outline-rounded.png" alt="Разработка програмного обеспечения">
+                </div>
+                <div class="service-text">
+                    <a class="a_h3">Разработка программного обеспечения</a>
+                    <p>Индивидуальные решения от мобильных приложений до сложных систем управления</p>
+                </div>
+            </div>
+            <div class="service-card">
+            <div class="service-card-icon-2">
+                <img class="service-img" src="img/fluent_developer-board-16-regular.png" alt="Производство апаратного обеспечения">
+            </div>
+            <div class="service-text">
+                <a class="a_h3">Производство аппаратного обеспечения</a>
+                <p>Поэтапный контроль — от концепции до серийного производства на нашей производственной базе</p>
+            </div>
+            </div>
+            <div class="service-card">
+                <div class="service-card-icon-3">
+                    <img class="service-img" src="img/carbon_continuous-integration.png" alt="Интеграция систем">
+                </div>
+                <div class="service-text">
+                    <a class="a_h3">Интеграция <br> систем</a>
+                    <p>Оптимизация бизнес процессов путём интеграции новых решений с уже существующими системами</p>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--services end-->
+
+<!--contacts start-->
+    <div id="contacts" class="contact-section">
+        <div class="contact-block">
+            <div class="contact-info">
+                <div class="contact-content">
+                    <a class="a_info">ООО «Ай Ти Инновации»</a>
+                    <div class="info_text">
+                        <div class="contact-address">
+                            <img src="img/geo_local.png" alt="Location Icon" class="contact-icon">
+                            <a class="adress_text">г. Санкт-Петербург, ш. Революции, д. <br> 69, литера Б, пом. 2Н, 3Н, офис 206Б</a>
+                        </div>
+                        <div class="contact-phone">
+                            <img src="img/phone.png" alt="Phone Icon" class="contact-icon_phone">
+                            <a class="phone-numb">+7 (921) 556-80-19,<br> +7 (921) 410-05-58</a>
+                        </div>
+                        <div class="contact-email">
+                            <img src="img/mage_email.png" alt="Email Icon" class="contact-icon">
+                            <a class="mail_text">info@it-innovate.ru</a>
+                        </div>
+
+                    </div>
+                    <img src="img/qr_code.png" alt="QR Code" class="qr-code">
+                </div>
+            </div>
+            <img src="img/geo_metka.png" alt="geo_metka" class="geo_metka">
+
+        </div>
+    </div>
+<!--contacts end-->
+</body>
+</html>
